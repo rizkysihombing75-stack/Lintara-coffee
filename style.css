@@ -1,0 +1,4 @@
+/* CSS minimal contoh */
+body { font-family: Arial,sans-serif; margin:0; padding:0; }
+.hero { height:100vh; display:flex; justify-content:center; align-items:center; text-align:center; background:#f4f4f4; }
+.produk-container { display:flex; gap:20px; justify-content:center; }
