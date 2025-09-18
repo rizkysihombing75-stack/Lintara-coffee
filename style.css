@@ -12,7 +12,7 @@ body {
 /* ========== HERO SECTION ========== */
 .hero {
   height: 100vh;
-  background: url('<img src="1RQbEqV.jpeg" alt="Petani">') center center / cover no-repeat;
+  background: url('https://i.imgur.com/1RQbEqV.jpeg') center center / cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
