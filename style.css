@@ -15,26 +15,37 @@ body {
   background: #f4f4f4;
 }
 
-/* Kontainer produk */
+/* Card produk */
 .produk-container {
   display: flex;
-  flex-wrap: wrap;       /* responsif */
-  gap: 20px;
+  gap: 30px;
   justify-content: center;
-  padding: 20px;
+  flex-wrap: wrap;
 }
 
-/* Setiap item produk */
-.produk-container > .produk {
-  width: 200px;          /* batasi lebar */
+.produk {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 15px;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-/* Gambar produk */
-.produk-container img {
-  width: 100%;           /* isi penuh kotak 200px */
-  max-width: 200px;      /* batas maksimum */
-  height: auto;          /* jaga rasio */
-  display: block;
-  border-radius: 8px;
+.produk img {
+  width: 180px;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+/* Efek saat hover */
+.produk:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+.produk:hover img {
+  transform: scale(1.08);
 }
