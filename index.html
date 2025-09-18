@@ -1,53 +1,92 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lintara Coffee</title>
-  <link rel="stylesheet" href="style.css?v=2">
   <style>
-    .produk-container img {
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #faf8f5;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 40px;
+      color: #333;
+    }
+
+    /* Container produk */
+    .produk-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 40px 20px;
+    }
+
+    /* Card produk */
+    .produk {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px;
       width: 200px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    /* Gambar produk */
+    .produk img {
+      width: 100%;
       height: auto;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
       display: block;
-      border: 2px solid red; /* hanya untuk tes */
+      margin-bottom: 12px;
+    }
+
+    /* Judul produk */
+    .produk h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      color: #222;
+    }
+
+    /* Animasi hover */
+    .produk:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    }
+
+    .produk:hover img {
+      transform: scale(1.08);
     }
   </style>
 </head>
 <body>
-<!-- Hero Section -->
-<section class="hero">
-  <div class="hero-content">
-    <h2>Selamat Datang di Lintara Coffee</h2>
-    <p>Kopi terbaik dari tanah Lintong, diproses dengan sepenuh hati.</p>
-    <div class="hero-buttons">
-      <a href="#produk" class="btn-primary">Lihat Produk</a>
-      <a href="#tentang" class="btn-secondary">Tentang</a>
-    </div>
-  </div>
-</section>
-<!-- Produk Section -->
-<section id="produk" class="section">
+
   <h2>Produk Kopi Kami</h2>
   <div class="produk-container">
-    <div class="produk slide-in-left" data-proses="Manis, fruity (berry), full-bodied, aftertaste lembut.">
+    <div class="produk">
       <img src="vp4pvrV.png" alt="Natural">
       <h3>Natural</h3>
     </div>
-    <div class="produk slide-in-right" data-proses="Manis, sedikit karamel, body medium, aftertaste manis ringan.">
+    <div class="produk">
       <img src="Zlti69m.png" alt="Honey">
       <h3>Honey</h3>
     </div>
-    <div class="produk slide-in-left" data-proses="Bersih, asam ringan, sedikit pahit, aftertaste segar.">
+    <div class="produk">
       <img src="Y7mcMBQ.png" alt="Full Washed">
       <h3>Full Washed</h3>
     </div>
-    <div class="produk slide-in-right" data-proses="Seimbang, manis, asam ringan, sedikit pahit, aftertaste halus.">
+    <div class="produk">
       <img src="l8EmYxd.png" alt="Semi Washed">
       <h3>Semi Washed</h3>
     </div>
   </div>
-</section>
-<script src="script.js"></script>
+
 </body>
 </html>
