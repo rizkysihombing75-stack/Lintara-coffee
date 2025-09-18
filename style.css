@@ -1,4 +1,4 @@
-/* CSS minimal dengan perbaikan ukuran gambar */
+/* Reset dasar */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -18,22 +18,23 @@ body {
 /* Kontainer produk */
 .produk-container {
   display: flex;
-  flex-wrap: wrap;      /* supaya responsif kalau layar kecil */
+  flex-wrap: wrap;       /* responsif */
   gap: 20px;
   justify-content: center;
   padding: 20px;
 }
 
-/* Kotak tiap produk */
-.produk-container > div {
-  width: 250px;         /* lebar kotak seragam */
+/* Setiap item produk */
+.produk-container > .produk {
+  width: 200px;          /* batasi lebar */
   text-align: center;
 }
 
 /* Gambar produk */
 .produk-container img {
-  max-width: 100%;      /* menyesuaikan lebar kotak */
-  height: auto;         /* jaga proporsi gambar */
+  width: 100%;           /* isi penuh kotak 200px */
+  max-width: 200px;      /* batas maksimum */
+  height: auto;          /* jaga rasio */
   display: block;
-  border-radius: 8px;   /* opsional, sudut sedikit membulat */
+  border-radius: 8px;
 }
