@@ -1,4 +1,39 @@
-/* CSS minimal contoh */
-body { font-family: Arial,sans-serif; margin:0; padding:0; }
-.hero { height:100vh; display:flex; justify-content:center; align-items:center; text-align:center; background:#f4f4f4; }
-.produk-container { display:flex; gap:20px; justify-content:center; }
+/* CSS minimal dengan perbaikan ukuran gambar */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Bagian hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #f4f4f4;
+}
+
+/* Kontainer produk */
+.produk-container {
+  display: flex;
+  flex-wrap: wrap;      /* supaya responsif kalau layar kecil */
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Kotak tiap produk */
+.produk-container > div {
+  width: 250px;         /* lebar kotak seragam */
+  text-align: center;
+}
+
+/* Gambar produk */
+.produk-container img {
+  max-width: 100%;      /* menyesuaikan lebar kotak */
+  height: auto;         /* jaga proporsi gambar */
+  display: block;
+  border-radius: 8px;   /* opsional, sudut sedikit membulat */
+}
