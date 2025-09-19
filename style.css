@@ -1,85 +1,8 @@
-/* ========== RESET DASAR ========== */
-* {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background: #faf8f5;
-}
+/* Reset & Base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; line-height: 1.6; }
 
-/* ========== HERO SECTION ========== */
-.hero {
-  height: 100vh;
-  background-image: url("https://images.unsplash.com/photo-1509042239860-f550ce710b93");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff;
-}
-
-/* ========== PRODUK ========== */
-.produk-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  padding: 40px 20px;
-}
-
-.produk {
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  padding: 15px;
-  text-align: center;
-  width: 200px;               /* lebar kartu */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.produk img {
-  width: 100%;                /* otomatis mengikuti lebar kartu */
-  height: auto;
-  border-radius: 12px;
-  transition: transform 0.3s ease;
-}
-
-.produk h3 {
-  margin-top: 12px;
-  font-size: 1.1rem;
-  color: #222;
-}
-
-/* ========== HOVER EFFECT ========== */
-.produk:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
-}
-
-.produk:hover img {
-  transform: scale(1.08);
-}
-
-/* ========== RESPONSIVE ========== */
-@media (max-width: 600px) {
-  .produk {
-    width: 45%;
-  }
-}
-
-@media (max-width: 400px) {
-  .produk {
-    width: 90%;
-  }
-}
-/* Navbar Putih */
+/* Navbar */
 .navbar {
   background: #fff;
   color: #000;
@@ -91,33 +14,90 @@ body {
   align-items: center;
   padding: 15px 40px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  z-index: 999;
+  z-index: 1000;
 }
-
-.navbar .logo {
-  font-size: 22px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.navbar nav ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar nav a {
+.navbar .logo { font-weight: bold; font-size: 22px; letter-spacing: 1px; }
+.navbar nav ul { list-style: none; display: flex; gap: 25px; }
+.navbar nav a { text-decoration: none; color: #000; font-weight: 500; }
+.navbar nav a:hover { color: #555; }
+.btn-pesan {
+  background: #6b4f33;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
   text-decoration: none;
-  color: #000;
-  font-weight: 500;
 }
 
-.navbar nav a:hover {
-  color: #555;
+/* Hero */
+.hero {
+  background: url('https://i.imgur.com/7L1q5kz.jpeg') center/cover no-repeat;
+  color: #fff;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
 }
-body {
-  margin: 0;
-  padding-top: 80px; /* beri jarak agar konten tidak ketimpa navbar fixed */
+.hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
+.btn-primary {
+  background: #6b4f33;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
 }
+
+/* Section */
+.section { padding: 80px 20px; max-width: 1100px; margin: auto; }
+.section h2 { text-align: center; margin-bottom: 40px; }
+
+/* Produk */
+.produk-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.produk img { width: 100%; border-radius: 10px; cursor: pointer; }
+
+/* Modal */
+#modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+.modal-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 400px;
+}
+#closeModal { float: right; cursor: pointer; font-size: 22px; }
+
+/* Tentang */
+.tentang-wrapper { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
+.tentang-img { flex: 1 1 400px; width: 100%; border-radius: 15px; }
+.tentang-text { flex: 1 1 400px; }
+
+/* Galeri */
+.galeri-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 20px;
+}
+.galeri-container img { width: 100%; border-radius: 10px; }
+
+/* Footer */
+footer {
+  background: #6b4f33;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* Spacing to avoid navbar overlap */
+body { padding-top: 80px; }
