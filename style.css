@@ -180,25 +180,46 @@ footer {
   padding: 20px 0;
   margin-top: 40px;
 }
+.tentang-wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+.tentang-img {
+  flex: 1 1 250px;
+  max-width: 250px;
+  border-radius: 15px;
+}
+.tentang-text {
+  flex: 2 1 500px;
+}
+.tentang-text h2 {
+  color: #6b4f33;
+  margin-bottom: 15px;
+}
+.tentang-text h3 {
+  color: #6b4f33;
+  margin-top: 20px;
+}
+.tentang-text ul {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
 
-/* ===== RESPONSIVE ===== */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .navbar {
-    flex-wrap: wrap;
-    padding: 12px 20px;
-  }
-  .navbar nav ul { gap: 15px; }
-  .hero h1 { font-size: 2rem; }
-  .hero-tentang {
+  .tentang-wrapper {
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 20px;
   }
-  .hero-tentang .hero-logo {
-    height: 150px;
+  .tentang-img {
+    max-width: 150px;
   }
-  .hero-tentang .tentang-info {
+  .tentang-text {
     max-width: 100%;
   }
 }
