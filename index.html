@@ -1,175 +1,105 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lintara Coffee</title>
-  <style>
-    /* ===== RESET & BODY ===== */
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #faf8f5;
-      color: #333;
-    }
-
-    <!-- ===== NAVBAR PUTIH ===== -->
-<header class="navbar">
-  <div class="logo">LINTARA COFFFE</div>
-  <nav>
-    <ul>
-      <li><a href="#produk">Produk</a></li>
-      <li><a href="#tentang">Tentang</a></li>
-      <li><a href="#galeri">Galeri</a></li>
-      <li><a href="#kontak">Kontak</a></li>
-    </ul>
-  </nav>
-</header>
-
-    /* ===== HERO ===== */
-    .hero {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background-image: url("https://i.imgur.com/1RQbEqV.jpeg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      position: relative;
-      color: #fff;
-      padding-top: 60px; /* agar konten tidak tertutup navbar */
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.4);
-    }
-    .hero-content {
-      position: relative;
-      z-index: 1;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
-    .hero a {
-      display: inline-block;
-      background: #6b4f33;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 25px;
-      text-decoration: none;
-      margin: 0 5px;
-      transition: background 0.3s ease;
-    }
-    .hero a:hover {
-      background: #8b6a4c;
-    }
-
-    /* ===== PRODUK ===== */
-    h2 {
-      text-align: center;
-      margin: 60px 0 20px;
-      color: #333;
-    }
-    .produk-container {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 40px;
-      padding: 40px 20px;
-    }
-    .produk {
-      background: #fff;
-      border-radius: 12px;
-      padding: 16px;
-      width: 200px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-    }
-    .produk img {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      transition: transform 0.3s ease;
-      display: block;
-      margin-bottom: 12px;
-    }
-    .produk h3 {
-      margin: 0;
-      font-size: 1.1rem;
-      color: #222;
-    }
-    .produk:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
-    }
-    .produk:hover img {
-      transform: scale(1.08);
-    }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 600px) {
-      .produk { width: 45%; }
-    }
-    @media (max-width: 400px) {
-      .produk { width: 90%; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
+  <!-- ===== NAVBAR PUTIH ===== -->
   <header class="navbar">
-    <div class="logo">Lintara Coffee</div>
+    <div class="logo">LINTARA COFFFE</div>
     <nav>
-      <a href="#produk">Produk</a>
-      <a href="#tentang">Tentang</a>
-      <a href="#kontak">Kontak</a>
+      <ul>
+        <li><a href="#produk">Produk</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
     </nav>
+    <a href="https://wa.me/6281370839919?text=Halo%20Lintara%20Coffee" class="btn-pesan" target="_blank">
+      Pesan
+    </a>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
     <div class="hero-content">
       <h1>Selamat Datang di Lintara Coffee</h1>
-      <p>Kopi terbaik dari tanah Lintong, diproses dengan sepenuh hati.</p>
-      <a href="#produk">Lihat Produk</a>
+      <p>Kopi terbaik dari tanah Lintong, diproses sepenuh hati.</p>
+      <a href="#produk" class="btn-primary">Lihat Produk</a>
     </div>
   </section>
 
-  <!-- PRODUK -->
-  <h2 id="produk">Produk Kopi Kami</h2>
-  <div class="produk-container">
-    <div class="produk">
-      <img src="vp4pvrV.png" alt="Natural">
-      <h3>Natural</h3>
+  <!-- ===== PRODUK ===== -->
+  <section id="produk" class="section">
+    <h2>Produk Kopi Kami</h2>
+    <div class="produk-container">
+      <div class="produk" data-proses="Manis, fruity (berry), full-bodied, aftertaste lembut.">
+        <img src="https://i.imgur.com/vp4pvrV.png" alt="Natural">
+        <h3>Natural</h3>
+      </div>
+      <div class="produk" data-proses="Manis, sedikit karamel, body medium, aftertaste manis ringan.">
+        <img src="https://i.imgur.com/Zlti69m.png" alt="Honey">
+        <h3>Honey</h3>
+      </div>
+      <div class="produk" data-proses="Bersih, asam ringan, sedikit pahit, aftertaste segar.">
+        <img src="https://i.imgur.com/Y7mcMBQ.png" alt="Full Washed">
+        <h3>Full Washed</h3>
+      </div>
+      <div class="produk" data-proses="Seimbang, manis, asam ringan, sedikit pahit, aftertaste halus.">
+        <img src="https://i.imgur.com/l8EmYxd.png" alt="Semi Washed">
+        <h3>Semi Washed</h3>
+      </div>
     </div>
-    <div class="produk">
-      <img src="Zlti69m.png" alt="Honey">
-      <h3>Honey</h3>
-    </div>
-    <div class="produk">
-      <img src="Y7mcMBQ.png" alt="Full Washed">
-      <h3>Full Washed</h3>
-    </div>
-    <div class="produk">
-      <img src="l8EmYxd.png" alt="Semi Washed">
-      <h3>Semi Washed</h3>
+  </section>
+
+  <!-- Modal Produk -->
+  <div id="modal">
+    <div class="modal-box">
+      <span id="closeModal">&times;</span>
+      <h3 id="modalTitle"></h3>
+      <p id="modalContent"></p>
     </div>
   </div>
 
+  <!-- ===== TENTANG ===== -->
+  <section id="tentang" class="section tentang">
+    <div class="tentang-wrapper">
+      <img src="https://i.imgur.com/gy33DQW.jpeg" alt="Kopi Lintara" class="tentang-img">
+      <div class="tentang-text">
+        <h2>Tentang Kami</h2>
+        <p>Lintara Coffee lahir dari kecintaan kami terhadap kopi Lintong...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERI ===== -->
+  <section id="galeri" class="section">
+    <h2>Galeri</h2>
+    <div class="galeri-container">
+      <div class="galeri-item"><img src="https://i.imgur.com/6eFa1Fv.png" alt="Proses 1"></div>
+      <div class="galeri-item"><img src="https://i.imgur.com/7L1q5kz.jpeg" alt="Proses 2"></div>
+      <div class="galeri-item"><img src="https://i.imgur.com/JD83kRt.png" alt="Proses 3"></div>
+      <div class="galeri-item"><img src="https://i.imgur.com/IdAB9IJ.png" alt="Proses 4"></div>
+    </div>
+  </section>
+
+  <!-- ===== KONTAK ===== -->
+  <section id="kontak" class="section">
+    <h2>Kontak</h2>
+    <p>Email: coffeelintara@gmail.com</p>
+    <p>Telp: +62 813 7083 9919</p>
+    <p>Instagram: @lintaracoffee</p>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 Lintara Coffee. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
