@@ -25,44 +25,37 @@ body {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   z-index: 1000;
 }
-
 .logo-wrap {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
 .navbar img.logo-img {
   height: 40px !important;
   width: auto !important;
   max-width: 40px !important;
   object-fit: contain;
 }
-
 .logo-text {
   font-size: 22px;
   font-weight: bold;
   letter-spacing: 1px;
   color: #000;
 }
-
 .navbar nav ul {
   list-style: none;
   display: flex;
   gap: 25px;
 }
-
 .navbar nav ul li a {
   text-decoration: none;
   color: #000;
   font-weight: 500;
   transition: color 0.2s;
 }
-
 .navbar nav ul li a:hover {
   color: #6b4226;
 }
-
 .btn-pesan {
   background: #6b4226;
   color: #fff;
@@ -83,9 +76,46 @@ body {
   justify-content: center;
   color: #fff;
   text-align: center;
-  padding-top: 80px; /* supaya tidak ketutupan navbar */
+  padding-top: 80px;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+.hero p {
+  font-size: 1.2rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
 }
 
+/* ===== TENTANG KAMI DI SAMPING LOGO ===== */
+.hero-tentang {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 120px 40px 60px 40px;
+  background: #fdf7f0;
+}
+.hero-tentang .hero-logo {
+  height: 200px;
+  width: auto;
+  border-radius: 15px;
+  flex-shrink: 0;
+}
+.hero-tentang .tentang-info {
+  max-width: 700px;
+}
+.hero-tentang h2 {
+  color: #6b4f33;
+  margin-bottom: 20px;
+}
+.hero-tentang h3 {
+  color: #6b4f33;
+  margin-top: 20px;
+}
+.hero-tentang ul {
+  margin-left: 20px;
+}
 
 /* ===== SECTION GENERIC ===== */
 .section {
@@ -131,32 +161,6 @@ body {
   font-size: 22px;
 }
 
-/* ===== TENTANG ===== */
-.tentang-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  align-items: center;
-}
-.tentang-img {
-  flex: 1 1 400px;
-  width: 100%;
-  border-radius: 15px;
-}
-.tentang-text {
-  flex: 1 1 400px;
-}
-
-/* --- BATASI LOGO NAVBAR --- */
-.navbar .logo-img {
-  height: 40px !important;   /* tinggi tetap */
-  width: auto !important;    /* lebar otomatis proporsional */
-  max-width: 40px !important;
-  object-fit: contain;
-  display: inline-block;
-  vertical-align: middle;
-}
-
 /* ===== GALERI ===== */
 .galeri-container {
   display: grid;
@@ -185,4 +189,16 @@ footer {
   }
   .navbar nav ul { gap: 15px; }
   .hero h1 { font-size: 2rem; }
+  .hero-tentang {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+  .hero-tentang .hero-logo {
+    height: 150px;
+  }
+  .hero-tentang .tentang-info {
+    max-width: 100%;
+  }
 }
