@@ -4,10 +4,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  padding-top: 80px; /* ruang agar navbar tidak menutupi konten */
+  padding-top: 80px; /* ruang untuk navbar */
 }
 
 /* ===== NAVBAR ===== */
@@ -24,40 +25,54 @@ body {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   z-index: 1000;
 }
+
 .logo-wrap {
   display: flex;
   align-items: center;
   gap: 10px;
 }
+
 .logo-img {
-  height: 50px; /* sedikit lebih besar */
+  height: 50px; /* logo sedikit lebih besar */
   width: auto;
   object-fit: contain;
 }
+
 .logo-text {
   font-size: 22px;
   font-weight: bold;
   color: #000;
 }
+
 .navbar nav ul {
   list-style: none;
   display: flex;
   gap: 25px;
 }
+
 .navbar nav ul li a {
   text-decoration: none;
   color: #000;
   font-weight: 500;
+  transition: color 0.2s;
 }
-.navbar nav ul li a:hover { color: #6b4226; }
+
+.navbar nav ul li a:hover {
+  color: #6b4226;
+}
+
 .btn-pesan {
   background: #6b4226;
   color: #fff;
   padding: 8px 18px;
   border-radius: 6px;
   text-decoration: none;
+  transition: background 0.2s;
 }
-.btn-pesan:hover { background: #4a2d1c; }
+
+.btn-pesan:hover {
+  background: #4a2d1c;
+}
 
 /* ===== HERO ===== */
 .hero {
@@ -71,7 +86,30 @@ body {
   padding: 20px;
 }
 
-/* ===== TENTANG KAMI DI SAMPING LOGO ===== */
+.hero-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+.hero-logo {
+  width: 250px;
+  border-radius: 15px;
+  flex-shrink: 0;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+/* ===== TENTANG KAMI ===== */
 .tentang-wrapper {
   display: flex;
   justify-content: center;
@@ -87,7 +125,7 @@ body {
 }
 
 .tentang-img {
-  flex: 0 0 250px; /* logo lebih besar */
+  flex: 0 0 250px; /* logo sedikit lebih besar */
   width: 250px;
   border-radius: 15px;
 }
@@ -106,28 +144,24 @@ body {
   margin-bottom: 15px;
 }
 
-.tentang-text ul li {
-  margin-left: 20px;
-  margin-bottom: 10px;
-}
-
-/* ===== SECTION GENERIC ===== */
+/* ===== PRODUK ===== */
 .section {
   padding: 80px 20px;
   max-width: 1100px;
   margin: auto;
 }
+
 .section h2 {
   text-align: center;
   margin-bottom: 40px;
 }
 
-/* ===== PRODUK ===== */
 .produk-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
+
 .produk img {
   width: 100%;
   border-radius: 10px;
@@ -137,9 +171,10 @@ body {
 /* ===== GALERI ===== */
 .galeri-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
+
 .galeri-container img {
   width: 100%;
   border-radius: 10px;
@@ -154,7 +189,19 @@ footer {
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 768px){
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-logo {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
   .tentang-inner {
     flex-direction: column;
     align-items: center;
@@ -166,8 +213,5 @@ footer {
   }
   .tentang-text {
     flex: 1 1 100%;
-  }
-  .hero h1 {
-    font-size: 2rem;
   }
 }
