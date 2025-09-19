@@ -86,15 +86,6 @@ body {
   padding-top: 80px; /* supaya tidak ketutupan navbar */
 }
 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
-}
-.hero p {
-  font-size: 1.2rem;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
-}
 
 /* ===== SECTION GENERIC ===== */
 .section {
