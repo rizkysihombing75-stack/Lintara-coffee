@@ -26,18 +26,6 @@ body {
   z-index: 1000;
 }
 
-.logo-wrap {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo-img {
-  height: 50px; /* logo sedikit lebih besar */
-  width: auto;
-  object-fit: contain;
-}
-
 .logo-text {
   font-size: 22px;
   font-weight: bold;
@@ -94,13 +82,13 @@ body {
   flex-wrap: wrap;
 }
 
+/* === LOGO HERO === */
 .hero-logo {
   width: 450px;       /* ubah angka sesuai keinginan */
   height: auto;       /* supaya proporsi tetap terjaga */
   border-radius: 15px;
   flex-shrink: 0;
   display: block;     /* pastikan tampil */
-}
 }
 
 .hero-text h1 {
@@ -128,7 +116,7 @@ body {
 }
 
 .tentang-img {
-  flex: 0 0 250px; /* logo sedikit lebih besar */
+  flex: 0 0 250px;
   width: 250px;
   border-radius: 15px;
 }
