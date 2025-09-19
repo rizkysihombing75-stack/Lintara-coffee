@@ -157,6 +157,16 @@ body {
   flex: 1 1 400px;
 }
 
+/* --- BATASI LOGO NAVBAR --- */
+.navbar .logo-img {
+  height: 40px !important;   /* tinggi tetap */
+  width: auto !important;    /* lebar otomatis proporsional */
+  max-width: 40px !important;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 /* ===== GALERI ===== */
 .galeri-container {
   display: grid;
