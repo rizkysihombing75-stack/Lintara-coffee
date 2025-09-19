@@ -1,8 +1,8 @@
-/* ===== RESET & BASE ===== */
+/* RESET & BASE */
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family: Arial, sans-serif; line-height:1.6; padding-top:80px; }
 
-/* ===== NAVBAR ===== */
+/* NAVBAR */
 .navbar {
   position: fixed; top:0; left:0; width:100%;
   background:#fff; display:flex; justify-content:space-between; align-items:center;
@@ -10,46 +10,47 @@ body { font-family: Arial, sans-serif; line-height:1.6; padding-top:80px; }
 }
 .logo-wrap { display:flex; align-items:center; gap:10px; }
 .logo-img { height:40px; width:auto; object-fit:contain; }
-.logo-text { font-size:22px; font-weight:bold; letter-spacing:1px; color:#000; }
+.logo-text { font-size:22px; font-weight:bold; color:#000; }
 .navbar nav ul { list-style:none; display:flex; gap:25px; }
-.navbar nav ul li a { text-decoration:none; color:#000; font-weight:500; transition:0.2s; }
+.navbar nav ul li a { text-decoration:none; color:#000; font-weight:500; }
 .navbar nav ul li a:hover { color:#6b4226; }
-.btn-pesan { background:#6b4226; color:#fff; padding:8px 18px; border-radius:6px; text-decoration:none; transition:0.2s; }
+.btn-pesan { background:#6b4226; color:#fff; padding:8px 18px; border-radius:6px; text-decoration:none; }
 .btn-pesan:hover { background:#4a2d1c; }
 
-/* ===== HERO ===== */
+/* HERO + TENTANG DI SAMPING LOGO */
 .hero {
-  min-height:90vh;
+  min-height:100vh;
   background: url('https://i.imgur.com/1RQbEqV.jpeg') center/cover no-repeat;
-  display:flex; flex-direction:column; align-items:center; justify-content:center;
-  text-align:center; color:#fff; padding-top:80px;
+  display:flex; align-items:center; justify-content:center;
+  color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.6); padding:20px;
 }
-.hero h1 { font-size:3rem; margin-bottom:20px; text-shadow:0 2px 4px rgba(0,0,0,0.6); }
-.hero p { font-size:1.2rem; text-shadow:0 2px 4px rgba(0,0,0,0.6); }
+.hero-content {
+  display:flex; align-items:flex-start; gap:40px; max-width:1200px; flex-wrap:wrap;
+}
+.hero-logo { width:200px; border-radius:15px; flex-shrink:0; }
+.hero-text { flex:1; }
+.hero-text h1 { font-size:2.5rem; margin-bottom:15px; }
+.hero-text h3 { margin-top:15px; margin-bottom:5px; }
+.hero-text ul { margin-left:20px; margin-bottom:15px; }
 
-/* ===== TENTANG ===== */
-.tentang-container { display:flex; flex-wrap:wrap; align-items:center; gap:30px; }
-.tentang-img { flex:0 0 200px; width:200px; border-radius:15px; }
-.tentang-text { flex:1; }
-.tentang-text h2 { margin-bottom:15px; }
-.tentang-text h3 { margin-top:15px; margin-bottom:5px; }
-.tentang-text ul { margin-left:20px; margin-bottom:15px; }
+/* SECTION */
+.section { padding:80px 20px; max-width:1100px; margin:auto; }
+.section h2 { text-align:center; margin-bottom:40px; }
 
-/* ===== PRODUK ===== */
+/* PRODUK */
 .produk-container { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
 .produk img { width:100%; border-radius:10px; cursor:pointer; }
 
-/* ===== GALERI ===== */
+/* GALERI */
 .galeri-container { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
 .galeri-container img { width:100%; border-radius:10px; }
 
-/* ===== FOOTER ===== */
-footer { background:#6b4f33; color:#fff; text-align:center; padding:20px 0; margin-top:40px; }
+/* FOOTER */
+footer { background:#6b4f33; color:#fff; text-align:center; padding:20px 0; }
 
-/* ===== RESPONSIVE ===== */
+/* RESPONSIVE */
 @media (max-width:768px){
-  .navbar { flex-wrap:wrap; padding:12px 20px; }
-  .hero h1 { font-size:2rem; }
-  .tentang-container { flex-direction:column; text-align:center; }
-  .tentang-img { margin-bottom:20px; }
+  .hero-content { flex-direction:column; align-items:center; text-align:center; }
+  .hero-logo { width:150px; margin-bottom:20px; }
+  .hero-text h1 { font-size:2rem; }
 }
