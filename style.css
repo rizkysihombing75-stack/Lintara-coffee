@@ -95,9 +95,12 @@ body {
 }
 
 .hero-logo {
-  width:250;
+  width: 450px;       /* ubah angka sesuai keinginan */
+  height: auto;       /* supaya proporsi tetap terjaga */
   border-radius: 15px;
   flex-shrink: 0;
+  display: block;     /* pastikan tampil */
+}
 }
 
 .hero-text h1 {
