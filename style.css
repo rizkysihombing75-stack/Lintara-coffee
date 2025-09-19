@@ -1,37 +1,77 @@
-/* RESET & BASE */
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: Arial, sans-serif; line-height:1.6; padding-top:80px; }
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding-top: 80px; /* ruang agar navbar tidak menutupi konten */
+}
 
-/* NAVBAR */
+/* ===== NAVBAR ===== */
 .navbar {
-  position: fixed; top:0; left:0; width:100%;
-  background:#fff; display:flex; justify-content:space-between; align-items:center;
-  padding:12px 40px; box-shadow:0 2px 6px rgba(0,0,0,0.1); z-index:1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
-.logo-wrap { display:flex; align-items:center; gap:10px; }
-.logo-img { height:40px; width:auto; object-fit:contain; }
-.logo-text { font-size:22px; font-weight:bold; color:#000; }
-.navbar nav ul { list-style:none; display:flex; gap:25px; }
-.navbar nav ul li a { text-decoration:none; color:#000; font-weight:500; }
-.navbar nav ul li a:hover { color:#6b4226; }
-.btn-pesan { background:#6b4226; color:#fff; padding:8px 18px; border-radius:6px; text-decoration:none; }
-.btn-pesan:hover { background:#4a2d1c; }
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-img {
+  height: 50px; /* sedikit lebih besar */
+  width: auto;
+  object-fit: contain;
+}
+.logo-text {
+  font-size: 22px;
+  font-weight: bold;
+  color: #000;
+}
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+.navbar nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+.navbar nav ul li a:hover { color: #6b4226; }
+.btn-pesan {
+  background: #6b4226;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.btn-pesan:hover { background: #4a2d1c; }
 
-/* HERO + TENTANG DI SAMPING LOGO */
+/* ===== HERO ===== */
 .hero {
-  min-height:100vh;
+  min-height: 100vh;
   background: url('https://i.imgur.com/1RQbEqV.jpeg') center/cover no-repeat;
-  display:flex; align-items:center; justify-content:center;
-  color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.6); padding:20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+  padding: 20px;
 }
-.hero-content {
-  display:flex; align-items:flex-start; gap:40px; max-width:1200px; flex-wrap:wrap;
-}
-.hero-logo { 
-  width: 250px; /* dari 200px sebelumnya */
-  border-radius: 15px; 
-  flex-shrink: 0; 
-}
+
+/* ===== TENTANG KAMI DI SAMPING LOGO ===== */
 .tentang-wrapper {
   display: flex;
   justify-content: center;
@@ -47,7 +87,7 @@ body { font-family: Arial, sans-serif; line-height:1.6; padding-top:80px; }
 }
 
 .tentang-img {
-  flex: 0 0 250px; /* logo sedikit lebih besar */
+  flex: 0 0 250px; /* logo lebih besar */
   width: 250px;
   border-radius: 15px;
 }
@@ -66,24 +106,68 @@ body { font-family: Arial, sans-serif; line-height:1.6; padding-top:80px; }
   margin-bottom: 15px;
 }
 
-/* SECTION */
-.section { padding:80px 20px; max-width:1100px; margin:auto; }
-.section h2 { text-align:center; margin-bottom:40px; }
+.tentang-text ul li {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
 
-/* PRODUK */
-.produk-container { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
-.produk img { width:100%; border-radius:10px; cursor:pointer; }
+/* ===== SECTION GENERIC ===== */
+.section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+.section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
-/* GALERI */
-.galeri-container { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
-.galeri-container img { width:100%; border-radius:10px; }
+/* ===== PRODUK ===== */
+.produk-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.produk img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+}
 
-/* FOOTER */
-footer { background:#6b4f33; color:#fff; text-align:center; padding:20px 0; }
+/* ===== GALERI ===== */
+.galeri-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 20px;
+}
+.galeri-container img {
+  width: 100%;
+  border-radius: 10px;
+}
 
-/* RESPONSIVE */
-@media (max-width:768px){
-  .hero-content { flex-direction:column; align-items:center; text-align:center; }
-  .hero-logo { width:150px; margin-bottom:20px; }
-  .hero-text h1 { font-size:2rem; }
+/* ===== FOOTER ===== */
+footer {
+  background: #6b4f33;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px){
+  .tentang-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .tentang-img {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  .tentang-text {
+    flex: 1 1 100%;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
 }
