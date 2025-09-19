@@ -238,3 +238,47 @@ footer {
     flex: 1 1 100%;
   }
 }
+/* =======================================================
+ ANIMASI LOGO HERO 
+   ======================================================= */
+.hero-logo {
+  width: 400px;
+  height: auto;
+  border-radius: 15px;
+  flex-shrink: 0;
+  display: block;
+
+  /* Animasi masuk (fade + zoom) */
+  opacity: 0;
+  transform: scale(0.8);
+  animation: logoFadeZoom 2s ease-out forwards;
+
+  /* Animasi berulang: berdenyut pelan setelah fade-in selesai */
+  animation-delay: 0s, 2s;              /* Delay untuk animasi kedua */
+  animation-name: logoFadeZoom, logoPulse;
+  animation-duration: 2s, 6s;
+  animation-timing-function: ease-out, ease-in-out;
+  animation-fill-mode: forwards, infinite;
+}
+
+/* Keyframes fade + zoom saat pertama kali muncul */
+@keyframes logoFadeZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Keyframes berdenyut perlahan */
+@keyframes logoPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
