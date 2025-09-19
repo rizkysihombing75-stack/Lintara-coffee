@@ -186,6 +186,3 @@ footer {
   .navbar nav ul { gap: 15px; }
   .hero h1 { font-size: 2rem; }
 }
-.hero {
-  background: url('https://i.imgur.com/1RQbEqV.jpeg') center/cover no-repeat !important;
-}
