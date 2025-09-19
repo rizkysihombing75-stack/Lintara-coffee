@@ -95,7 +95,7 @@ body {
 }
 
 .hero-logo {
-  width: 250px;
+  width:400;
   border-radius: 15px;
   flex-shrink: 0;
 }
