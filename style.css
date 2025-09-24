@@ -296,14 +296,10 @@ footer {
 }
 
 /* Keyframes berdenyut perlahan */
-@keyframes logoPulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-}
+@keyframes pulse {
+  0%,100% { transform: scale(1); }
+  50%     { transform: scale(1.05); }
+} 
 /* ===== OWNER PROFILE ===== */
 .owner-profile {
   background: #f7f7f7;
