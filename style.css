@@ -304,3 +304,33 @@ footer {
     transform: scale(1.05);
   }
 }
+/* ===== OWNER PROFILE ===== */
+.owner-profile {
+  text-align: center;
+  background: #f7f7f7;
+  padding: 60px 20px;
+}
+.owner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.owner-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.owner-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.owner-text p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
