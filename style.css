@@ -120,7 +120,6 @@ body {
   0%,100% { transform: scale(1); }
   50%     { transform: scale(1.05); }
 }
-}
 
 .hero-text h1 {
   font-size: 2.8rem;
