@@ -1,22 +1,5 @@
-// Modal Produk
-const modal = document.getElementById('modal');
-const modalTitle = document.getElementById('modalTitle');
-const modalContent = document.getElementById('modalContent');
-const closeModal = document.getElementById('closeModal');
-
-document.querySelectorAll('.produk').forEach(item => {
-  item.addEventListener('click', () => {
-    modalTitle.textContent = item.querySelector('h3').textContent;
-    modalContent.textContent = item.dataset.proses;
-    modal.style.display = 'flex';
-  });
-});
-
-closeModal.addEventListener('click', () => modal.style.display = 'none');
-window.addEventListener('click', e => {
-  if (e.target === modal) modal.style.display = 'none';
-});
 <script>
+// Data produk
 const produkData = {
   "Natural": {
     img: "https://i.imgur.com/vp4pvrV.png",
@@ -36,14 +19,33 @@ const produkData = {
   }
 };
 
-// Elemen modal
+// Ambil elemen modal (pakai ID dari HTML kamu)
 const modal = document.getElementById("produkModal");
 const modalImg = document.getElementById("modalImg");
 const modalTitle = document.getElementById("modalTitle");
 const modalDesc = document.getElementById("modalDesc");
-const closeBtn = document.querySelector(".close");
+const closeBtn = document.getElementById("closeModal");
 
-// Klik produk
+// Event klik produk
 document.querySelectorAll(".produk").forEach(item => {
   item.addEventListener("click", () => {
     const nama = item.querySelector("h3").textContent;
+
+    modalTitle.textContent = nama;
+    modalDesc.textContent = produkData[nama].desc;
+    modalImg.src = produkData[nama].img;
+
+    modal.style.display = "flex";
+  });
+});
+
+// Tutup modal ketika klik X
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+// Tutup ketika klik area luar modal
+window.addEventListener("click", e => {
+  if (e.target === modal) modal.style.display = "none";
+});
+</script>
