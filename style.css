@@ -1,197 +1,27 @@
-/* =======================================================
-   RESET & BASE
-   ======================================================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  padding-top: 80px;           /* Memberi ruang agar konten tidak tertutup navbar fixed */
-  background-color: #fafafa;   /* Latar belakang netral */
-  color: #333;
-}
-
-/* =======================================================
-   NAVBAR
-   ======================================================= */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 40px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-}
-
-.logo-text {
-  font-size: 22px;
-  font-weight: bold;
-  color: #000;
-  letter-spacing: 1px;
-}
-
-.navbar nav ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-.navbar nav ul li a {
-  text-decoration: none;
-  color: #000;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-
-.navbar nav ul li a:hover {
-  color: #6b4226;
-}
-
-.btn-pesan {
-  background: #6b4226;
-  color: #fff;
-  padding: 8px 18px;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background 0.2s;
-}
-
-.btn-pesan:hover {
-  background: #4a2d1c;
-}
-
-/* =======================================================
-   HERO
-   ======================================================= */
-.hero {
-  min-height: 100vh;
-  background: url('https://i.imgur.com/1RQbEqV.jpeg') center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-  padding: 20px;
-}
-
-.hero-content {
-  display: flex;
-  align-items: flex-start;
-  gap: 40px;
-  max-width: 1200px;
-  flex-wrap: wrap;
-}
-
-/* Logo di Hero */
-.hero-logo {
-  width: 400px;
-  height: auto;
-  border-radius: 15px;
-  display: block;
-  flex-shrink: 0;
-
-  /* animasi masuk + denyut */
-  opacity: 0;
-  transform: scale(0.8);
-  animation: fadeZoom 2s ease-out forwards, pulse 6s ease-in-out 2s infinite;
-}
-
-@keyframes fadeZoom {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes pulse {
-  0%,100% { transform: scale(1); }
-  50%     { transform: scale(1.05); }
-}
-
-.hero-text h1 {
-  font-size: 2.8rem;
-  margin-bottom: 15px;
-}
-
-.hero-text p {
-  font-size: 1.2rem;
-}
-
-/* =======================================================
-   TENTANG KAMI
-   ======================================================= */
-.tentang-wrapper {
-  display: flex;
-  justify-content: center;
-  padding: 80px 20px;
-  background: #fff;
-}
-
-.tentang-inner {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  max-width: 1100px;
-  flex-wrap: wrap;
-}
-
-.tentang-text {
-  flex: 1 1 500px;
-}
-
-.tentang-text h2,
-.tentang-text h3 {
-  margin-bottom: 15px;
-  color: #6b4226;
-}
-
-.tentang-text p,
-.tentang-text ul {
-  margin-bottom: 15px;
-}
-
-/* =======================================================
-   PRODUK
-   ======================================================= */
-.section {
-  padding: 80px 20px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.section h2 {
+/* ===========================
+   KATALOG PRODUK
+=========================== */
+.katalog-produk {
+  padding: 40px 20px;
   text-align: center;
-  margin-bottom: 40px;
-  color: #6b4226;
+}
+
+.katalog-produk h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.kategori .text-container p {
+  margin: 5px 0;
+  font-size: 16px;
+  opacity: .8;
+}
+
+.kategori .text-container h3 {
+  font-size: 22px;
+  margin-top: 5px;
+  font-weight: bold;
 }
 
 .produk-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.produk img {
-  width: 100%;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.produk img:hover {
-  transform: scale(1.05);
-}
-/* ========================================*
+  disp
